@@ -565,8 +565,8 @@ class Form:
     def _parse_url(url: str):
         """Checks if the URL is a form url and extracts prefilled data."""
         url_data = urlsplit(url)
-        if not url_data.path.endswith('viewform'):
-            raise InvalidURL(url)
+        #if not url_data.path.endswith('viewform'):
+        #    raise InvalidURL(url)
         prefilled_data = {}
         query = parse_qs(url_data.query)
         if query.get('usp', [''])[0] == 'pp_url':
